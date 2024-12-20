@@ -2,14 +2,14 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React,{useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 
 import { PatientForm } from "@/components/forms/PatientForm";
 import { PasskeyModal } from "@/components/PasskeyModal";
 
 const Home = ({ searchParams }: SearchParamProps) => {
   const isAdmin = searchParams?.admin === "true";
-  const [year, setYear] = useState('');
+  const [year, setYear] = useState("");
 
   useEffect(() => {
     setYear(new Date().getFullYear().toString());
@@ -33,7 +33,7 @@ const Home = ({ searchParams }: SearchParamProps) => {
 
           <div className="text-14-regular mt-20 flex justify-between">
             <p className="justify-items-end text-dark-600 xl:text-left">
-                &copy; {year ? `${year} ` : ''}Care-heart made with♥
+              &copy; {year ? `${year} ` : ""}Care-heart made with♥ by Sam
             </p>
             <Link href="/?admin=true" className="text-green-500">
               Admin
@@ -43,7 +43,8 @@ const Home = ({ searchParams }: SearchParamProps) => {
       </section>
 
       <Image
-        src="/assets/images/onboarding-img.png"
+        // src="/assets/images/onboarding-img.png"
+        src="/assets/images/onboard.jpg"
         height={1000}
         width={1000}
         alt="patient"

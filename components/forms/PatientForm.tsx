@@ -14,6 +14,26 @@ import "react-phone-number-input/style.css";
 import CustomFormField, { FormFieldType } from "../CustomFormField";
 import SubmitButton from "../SubmitButton";
 
+// Function to validate phone number format
+const isValidPhoneNumber = (phone: string) => {
+  const phoneRegex = /^\+\d{1,15}$/; // Regex to match phone numbers starting with '+' and up to 15 digits
+  return phoneRegex.test(phone);
+};
+
+// Function to format the phone number
+const formatPhoneNumber = (phone: string) => {
+  // Remove any whitespace or non-digit characters (except '+')
+  const cleanedPhone = phone.replace(/[^+\d]/g, "");
+
+  // Check if the phone number starts with a '+'
+  if (!cleanedPhone.startsWith("+")) {
+    // Prepend the country code if necessary
+    return `+${cleanedPhone}`; // Assuming '2' is the default country code; adjust as needed
+  }
+
+  return cleanedPhone;
+};
+
 export const PatientForm = () => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
@@ -82,7 +102,7 @@ export const PatientForm = () => {
           control={form.control}
           name="phone"
           label="Phone number"
-          placeholder="(555) 123-4567"
+          placeholder="(264) 123-4567"
         />
 
         <SubmitButton isLoading={isLoading}>Get Started</SubmitButton>

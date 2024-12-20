@@ -14,7 +14,6 @@
 
   <h3 align="center">A HealthCare Management System</h3>
 
-   
 </div>
 
 ## 📋 <a name="table">Table of Contents</a>
@@ -29,19 +28,13 @@
 
 ## 🚨 Tutorial
 
-
-
 If you prefer visual learning, this is the perfect resource for you. Follow our tutorial to learn how to build projects like these step-by-step in a beginner-friendly manner!
-
-
 
 ## <a name="introduction">🤖 Introduction</a>
 
 A healthcare patient management application that allows patients to easily register, book, and manage their appointments with doctors, featuring administrative tools for scheduling, confirming, and canceling appointments, along with SMS notifications, all built using Next.js.
 
 If you're getting started and need assistance or face any bugs, join our active Discord community with over **34k+** members. It's a place where people help each other out.
-
-
 
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
@@ -733,22 +726,22 @@ export const formatDateTime = (dateString: Date | string) => {
 
   const formattedDateTime: string = new Date(dateString).toLocaleString(
     "en-US",
-    dateTimeOptions
+    dateTimeOptions,
   );
 
   const formattedDateDay: string = new Date(dateString).toLocaleString(
     "en-US",
-    dateDayOptions
+    dateDayOptions,
   );
 
   const formattedDate: string = new Date(dateString).toLocaleString(
     "en-US",
-    dateOptions
+    dateOptions,
   );
 
   const formattedTime: string = new Date(dateString).toLocaleString(
     "en-US",
-    timeOptions
+    timeOptions,
   );
 
   return {
@@ -814,7 +807,7 @@ export const PatientFormValidation = z.object({
     .string()
     .refine(
       (emergencyContactNumber) => /^\+\d{10,15}$/.test(emergencyContactNumber),
-      "Invalid phone number"
+      "Invalid phone number",
     ),
   primaryPhysician: z.string().min(2, "Select at least one doctor"),
   insuranceProvider: z
@@ -990,12 +983,13 @@ export const StatusIcon = {
 
 </details>
 
-
-
 **Advance your skills with Next.js 14 Pro Course**
 
-
-
-
-
 #
+
+Twillio:
+You're all verified!
+If you lose your phone, or don’t have access to your verification device, this code is your failsafe to access your account.
+Recovery code : H58BJQB1FTYZLBAY6XNW3J2T
+
++15075851578

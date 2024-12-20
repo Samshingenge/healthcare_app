@@ -141,7 +141,7 @@ const RegisterForm = ({ user }: { user: User }) => {
               control={form.control}
               name="phone"
               label="Phone Number"
-              placeholder="(555) 123-4567"
+              placeholder="+(264) 123-4567"
             />
           </div>
 
@@ -214,7 +214,7 @@ const RegisterForm = ({ user }: { user: User }) => {
               control={form.control}
               name="emergencyContactNumber"
               label="Emergency contact number"
-              placeholder="(555) 123-4567"
+              placeholder="+(264) 123-4567"
             />
           </div>
         </section>
@@ -330,7 +330,7 @@ const RegisterForm = ({ user }: { user: User }) => {
             control={form.control}
             name="identificationNumber"
             label="Identification Number"
-            placeholder="123456789"
+            placeholder="990119000"
           />
 
           <CustomFormField
@@ -382,3 +382,4 @@ const RegisterForm = ({ user }: { user: User }) => {
 };
 
 export default RegisterForm;
+import DatePicker from "react-datepicker";

@@ -3,7 +3,9 @@ import { E164Number } from "libphonenumber-js/core";
 import Image from "next/image";
 import ReactDatePicker from "react-datepicker";
 import { Control } from "react-hook-form";
+import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
+import flags from "react-phone-number-input/flags";
 
 import { Checkbox } from "./ui/checkbox";
 import {
@@ -80,6 +82,7 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
       return (
         <FormControl>
           <PhoneInput
+            flags={flags}
             defaultCountry="NA"
             placeholder={props.placeholder}
             international

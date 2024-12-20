@@ -54,8 +54,9 @@ export const AppointmentForm = ({
   });
 
   const onSubmit = async (
-    values: z.infer<typeof AppointmentFormValidation>
+    values: z.infer<typeof AppointmentFormValidation>,
   ) => {
+    // console.log("I AM Submitting", {type})
     setIsLoading(true);
 
     let status;
@@ -87,7 +88,7 @@ export const AppointmentForm = ({
         if (newAppointment) {
           form.reset();
           router.push(
-            `/patients/${userId}/new-appointment/success?appointmentId=${newAppointment.$id}`
+            `/patients/${userId}/new-appointment/success?appointmentId=${newAppointment.$id}`,
           );
         }
       } else {
