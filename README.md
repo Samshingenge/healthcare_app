@@ -893,7 +893,7 @@ export function getAppointmentSchema(type: string) {
 <summary><code>constants/index.ts</code></summary>
 
 ```typescript
-export const GenderOptions = ["Male", "Female", "Other"];
+export const GenderOptions = ["male", "female", "other"];
 
 export const PatientFormDefaultValues = {
   firstName: "",

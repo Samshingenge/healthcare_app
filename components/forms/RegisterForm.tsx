@@ -187,7 +187,7 @@ const RegisterForm = ({ user }: { user: User }) => {
               control={form.control}
               name="address"
               label="Address"
-              placeholder="14 street, New york, NY - 5101"
+              placeholder="Erf 3040 Oryx street, Windhoek"
             />
 
             <CustomFormField
@@ -382,4 +382,4 @@ const RegisterForm = ({ user }: { user: User }) => {
 };
 
 export default RegisterForm;
-import DatePicker from "react-datepicker";
+
