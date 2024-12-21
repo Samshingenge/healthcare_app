@@ -1,11 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+
 import { Button } from "@/components/ui/button";
 import { Doctors } from "@/constants";
 import { getAppointment } from "@/lib/actions/appointment.actions";
+import { getUser } from "@/lib/actions/patient.actions";
 import { formatDateTime } from "@/lib/utils";
 
-import { getUser } from "@/lib/actions/patient.actions";
+
 
 
 const RequestSuccess = async ({
@@ -18,7 +20,7 @@ const RequestSuccess = async ({
   const doctor = Doctors.find(
     (doctor) => doctor.name === appointment.primaryPhysician
   );
-  const user = await getUser(userId);
+  //const user = await getUser(userId);
 
   
 
